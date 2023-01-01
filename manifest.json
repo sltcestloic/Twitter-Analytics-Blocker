@@ -1,0 +1,13 @@
+{
+    "name": "Twitter Analytics Blocker",
+    "version": "0.1.0",
+    "description": "Removes Twitter analytics buttons",
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "manifest_version": 3
+}
