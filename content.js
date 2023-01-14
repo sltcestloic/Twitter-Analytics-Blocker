@@ -6,6 +6,10 @@ var observer = new MutationObserver(function() {
                 elem.parentNode.removeChild(elem);
         }
     });
+    document.querySelectorAll("nav").forEach(match => {
+        if (match.getAttribute("aria-live") == "polite" && match.getAttribute("role") == "navigation")
+            match.parentNode.removeChild(match);
+    });
 });
 
 observer.observe(document, { attributes: false, childList: true, characterData: false, subtree:true });
